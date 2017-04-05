@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="struts"  extends="struts-default">
+		<action name="lo" class="LoginAction" >
+			<result name="success" type="redirect">/index.jsp</result>
+			<result name="error">/jsp/login.jsp</result>
+		</action>
+		<action name="register" class="LoginAction" method="register">
+			<result name="success" type="redirect">/jsp/login.jsp</result>
+			<result name="error">/jsp/register.jsp</result>
+		</action>
+		<action name="updateUser" class="LoginAction" method="updateUser">
+			<result name="success" type="redirect">/index.jsp</result>
+		</action>
+		
+		<action name="logout" class="LoginAction" method="logout">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="catalogs" class="BookAction" method="catalogs" >
+			<result name="success">/jsp/head.jsp</result>
+		</action>
+		<action name="readBook" class="BookAction" method="readBook">
+			<result name="success">/jsp/goodsDescribed.jsp</result>
+		</action>
+		<action name="browseBook" class="BookAction" method="browseBook">
+			<result name="success">/browseBook.jsp</result>
+		</action>
+		<action name="searchBook" class="BookAction" method="searchBook">
+			<result name="success">/searchBook_result.jsp</result>
+		</action>
+		<action name="latestBooks" class="BookAction" method="latestBooks"/>	
+		
+		<action name="addToCart" class="ShoppingAction" method="addToCart">
+			<result name="success" type="redirect">/jsp/shoppingCart.jsp</result>
+		</action>
+		<action name="updateCart" class="ShoppingAction" method="updateCart">
+			<result name="success">/showCart.jsp</result>
+		</action>
+		<action name="deleteCart" class="ShoppingAction" method="deleteCart">
+			<result name="">/jsp/shoppingCart.jsp</result>
+		</action>
+		<action name="checkout" class="ShoppingAction" method="checkout">
+			<result name="success" type="redirect">/index.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action> 
+		<action name="alreadyBuy" class="ShoppingAction" method="alreadyBuy">
+			<result name="error">/jsp/login.jsp</result>
+		</action>
+	</package>
+</struts>    

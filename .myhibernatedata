@@ -1,0 +1,20 @@
+#MyEclipse Hibernate Properties
+#Wed Jun 08 09:54:23 CST 2016
+genBasicCompId=false
+sessionFactoryName=org.uril.HibernateSessionFactory
+profile=
+daoSFId=
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=identity
+genVersionTag=false
+sessionFactoryId=sessionFactory
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=
+configFile=/BookStore/src/applicationContext.xml
+createConfigFile=true
